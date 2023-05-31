@@ -1,0 +1,16 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  template-db:
+    image: postgres
+    container_name: template-db
+    restart: always
+    ports:
+      - 8000:5432
+    environment:
+      POSTGRES_PASSWORD: template123
+      POSTGRES_DB: template
+      POSTGRES_USER: backend
+  #  volumes:
+  #    - /root/dbdata/wwcc:/var/lib/postgresql/data
