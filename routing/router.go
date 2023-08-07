@@ -2,7 +2,7 @@ package routing
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"go-template/routing/app"
+	"go-template/service/app"
 )
 
 func Setup(f *fiber.App) {

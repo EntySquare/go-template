@@ -9,8 +9,6 @@ const (
 	CodeOk       = 0  // 成功
 	CodeErr      = -1 // 失败
 	CodeErrToken = -2 // token相关的异常
-	//CodeReject   = "2" // 拒绝
-	//CodeTimeout  = "3" // 超时
 )
 
 // JSONResponse represents an HTTP response which contains a JSON body.
@@ -18,7 +16,7 @@ type JSONResponse struct {
 	// HTTP status code.
 	Code int `json:"code"`
 	// JSON represents the JSON that should be serialized and sent to the client
-	JSON interface{} `json:"json"`
+	JSON interface{} `json:"data"`
 }
 
 func SuccessResponse(data interface{}) JSONResponse {
@@ -34,7 +32,6 @@ func MessageResponse(code int, msg, msgZh string) JSONResponse {
 		"code":   code,
 		"msg_zh": msgZh,
 	}).Warnf(msg)
-	//Log.Warnf("12312")
 	return JSONResponse{
 		Code: code,
 		JSON: struct {
