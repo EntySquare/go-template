@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// CheckTokenValidityTime 检查token 有效期
+// 检查token 有效期
 // token数据格式是token_value:timestamp 秒时间
 // 如果正确 就刷新token有效时间
 func CheckTokenValidityTime(token *string) bool {
@@ -39,7 +39,7 @@ func CheckTokenValidityTime(token *string) bool {
 	}
 }
 
-// CheckSpecialCharacters 检查token格式是否正确
+// 检查token格式是否正确
 func CheckSpecialCharacters(token *string) bool {
 	if token == nil {
 		return false

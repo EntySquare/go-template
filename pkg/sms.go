@@ -64,4 +64,5 @@ func SendEmailMessage(toEmail string) error {
 		fmt.Println("Failed to send email:", err)
 		return err
 	}
+	return nil
 }
