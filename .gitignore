@@ -22,8 +22,9 @@ go.work
 
 .idea
 go.sum
-docker-compose.yml
 .dbdate
 client.key
-.env.sample
-config
+
+docs/docs.go
+docs/swagger.json
+docs/swagger.yaml

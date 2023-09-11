@@ -8,7 +8,8 @@ import (
 	"time"
 )
 
-func RandomCodes(width int) string {
+// 随机数字
+func RandomNumber(width int) string {
 	numeric := [10]byte{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 	r := len(numeric)
 	rand.Seed(time.Now().UnixNano())

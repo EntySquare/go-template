@@ -16,13 +16,13 @@ type JSONResponse struct {
 	// HTTP status code.
 	Code int `json:"code"`
 	// JSON represents the JSON that should be serialized and sent to the client
-	JSON interface{} `json:"data"`
+	Data interface{} `json:"data"`
 }
 
 func SuccessResponse(data interface{}) JSONResponse {
 	return JSONResponse{
 		Code: 0,
-		JSON: data,
+		Data: data,
 	}
 }
 
@@ -34,7 +34,7 @@ func MessageResponse(code int, msg, msgZh string) JSONResponse {
 	}).Warnf(msg)
 	return JSONResponse{
 		Code: code,
-		JSON: struct {
+		Data: struct {
 			Message   string `json:"message"`
 			MessageZh string `json:"message_zh"`
 		}{msg, msgZh},
